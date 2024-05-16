@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KASSEL SOFT</title>
+    <!-- font awesome icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- title tag logo -->
+    <!-- <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"> -->
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{{asset('frontStyle/CSS/style.css')}}" />
+</head>
+<body class="cairo-uniquifier">
+
+    <div class="navbar">
+        <div class="animation-box">
+            <div class="nav-logo">
+                <a href="index.html">KASSEL</a>
+            </div>
+            <!-- <span class="jet"></span> -->
+        </div>
+
+        <nav class="menu" id="nav">
+          <span class="nav-item">
+            <a href="{{url('/')}}" data-i18n="home">Home</a>
+          </span>
+
+            <span class="nav-item">
+            <a href="{{url('/about')}}" data-i18n="about">about us</a>
+          </span>
+            <span class="nav-item">
+            <a href="{{url('/services')}}" data-i18n="services">services</a>
+          </span>
+            <span class="nav-item">
+            <a href="{{url('/jobs')}}" data-i18n="career">career</a>
+          </span>
+            <span class="nav-item">
+            <a href="{{url('/contact')}}" data-i18n="contact">contact us</a>
+          </span>
+        </nav>
+
+        @php
+            $currentLocale = app()->getLocale();
+            // Retrieve the language name from language files
+            $languageNames = [
+                'en' => 'English',
+                'ar' => 'العربية',
+                // Add other languages as needed
+            ];
+
+            $currentLanguageName = $languageNames[$currentLocale] ?? '';
+        @endphp
+        <div class="language-btn dropdown"   onclick="toggleDropdown()">
+            <button class="dropbtn"  >
+                <i class="fa-solid fa-globe"></i>
+                <i class="fa-solid fa-caret-down arrow-down"></i>
+                {{$currentLanguageName}}
+
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+
+
+                    <a   hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                        {{ $properties['native'] }}
+                    </a>
+
+                @endforeach
+            </div>
+        </div>
+        <input type="checkbox" id="check" />
+        <label for="#check" class="nav-icon">
+            <i class="fa-solid fa-bars" id="menu-icon" onclick="hideSlider()"></i>
+            <i class="fa-solid fa-x" id="close-icon" onclick="showSlider()"></i>
+        </label>
+    </div>
+</div>
+
+
+    <div class="container">
+        <div class="content">
+            <h2>THE MOST POWERFUL SOLUTION</h2>
+            <h1>
+                <span> Digital </span>
+                <span> Experience </span>
+                <span> With KASSEL </span>
+            </h1>
+            <p>
+                Kassel crafts top-tier websites and apps, blending creativity and
+                functionality. Clients trust their innovative digital solutions,
+                showcasing industry expertise. Leveraging AI and digital marketing,
+                Kassel ensures maximum visibility and engagement, driving success in
+                the online marketplace.
+            </p>
+
+            <div class="primary-btn">
+                <a href="{{url('/contact')}}" target="_blank">start your project</a>
+            </div>
+        </div>
+
+        <div class="animation">
+          <span style="--i: 1">
+            <img src="img/web-design.png" alt="" />
+              <!-- <span class="jet"></span> -->
+            <h2>Web Design</h2>
+          </span>
+            <span style="--i: 2">
+            <img src="img/web-development.png" alt="" />
+                <!-- <span class="jet"></span> -->
+            <h2>Web Development</h2>
+          </span>
+            <span style="--i: 3">
+            <img src="img/app-design.png" alt="" />
+                <!-- <span class="jet"></span> -->
+            <h2>Application Design</h2>
+          </span>
+            <span style="--i: 4">
+            <img src="img/app-development.png" alt="" />
+                <!-- <span class="jet"></span> -->
+            <h2>Application Development</h2>
+          </span>
+            <span style="--i: 5">
+            <img src="img/digital-marketing.png" alt="" />
+                <!-- <span class="jet"></span> -->
+            <h2>Digital Marketing</h2>
+          </span>
+            <span style="--i: 6">
+            <img src="img/logo-design.png" alt="" />
+                <!-- <span class="jet"></span> -->
+            <h2>logo design</h2>
+          </span>
+            <span style="--i: 7">
+            <img src="img/social-media-ads.png" alt="" />
+                <!-- <span class="jet"></span> -->
+            <h2>Social Media Ads</h2>
+          </span>
+        </div>
+    </div>
+
+<!-- SERVICES SECTION -->
+
+<div class="section">
+    <div class="heading">
+        <h1>
+            <span class="primary"> the most powerful </span>
+            <span class="primary"> agile product </span>
+            <span class="primary"> development </span>
+        </h1>
+    </div>
+    <div class="services-section">
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/web-development.png" alt="" />
+            </div>
+            <div class="hedding-section">
+                <h2 class="">
+                    <span class="primary">website </span>
+                    <span class="primary">design &</span>
+                    <span class="primary">Development</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/app-development.png" alt="" />
+            </div>
+            <div class="hedding-section">
+                <h2 class="">
+                    <span class="primary">Apps </span>
+                    <span class="primary">Design &</span>
+                    <span class="primary">Development</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/digital-marketing2.png" alt="" />
+            </div>
+            <div class="hedding-section">
+                <h2 class="">
+                    <span class="primary">Digital </span>
+                    <span class="primary">Marketing</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/media production.png" alt="" />
+            </div>
+            <div class="hedding-section">
+                <h2 class="">
+                    <span class="primary">media &</span>
+                    <span class="primary">production</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/design & branding.png" alt="" />
+            </div>
+            <div class="hedding-section">
+                <h2 class="primary">
+                    <span class="primary">design &</span>
+                    <span class="primary">branding</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/chatbot.png" alt="" />
+            </div>
+            <div class="hedding-section">
+                <h2 class="primary">
+                    <span class="primary">chatbot</span>
+                    <span class="primary">development</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/blockchain.png" alt="" />
+            </div>
+            <div class="hedding-section">
+                <h2 class="">
+                    <span class="primary">blockchain</span>
+                    <span class="primary">development</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <div class="img-section">
+                <img src="img/maintenance.png" alt="" />
+            </div>
+            <div class="hedding-section">
+                <h2 class="">
+                    <span class="primary">web app</span>
+                    <span class="primary">maintenance</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WHY CHOOSE US SECTION  -->
+
+<div class="section why-us">
+    <div class="heading">
+        <h5>reasons to choose us</h5>
+        <h1 class="primary">
+            Experience the difference with our IT solutions.
+            <!-- <span class="primary">Experience the</span> -->
+            <!-- <span class="primary">difference with</span>
+            <span class="primary">our </span>
+            <span class="primary">IT solutions.</span> -->
+        </h1>
+    </div>
+    <div class="why-us-container">
+        <!-- <div class="content">
+                <h2 class="primary">
+                    We help you to make work easy
+                </h2>
+                <p class="description">
+                    At Kassel Company, we understand what your business means to you. Our commitment is to simplify your work, delivering innovative solutions that enhance efficiency and allow you to concentrate effortlessly on your core objectives.
+
+                </p>
+                <div class="primary-btn">
+                    <a href="#">view more</a>
+                </div>
+            </div> -->
+
+        <div class="item-box">
+            <!-- test border -->
+            <div class="box">
+                <div class="box-content">
+                    <img src="img/solution.png" alt="" />
+
+                    <p class="description">Custom solutions for all businesses.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <img src="img/skilled team.png" alt="" />
+
+                    <p class="description">Skilled team with years of experience.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <img src="img/innovative problem.png" alt="" />
+
+                    <p class="description">
+                        Innovative problem-solving with latest tech.
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <img src="img/modern design.png" alt="" />
+
+                    <p class="description">Modern and visually appealing designs.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <img src="img/quality.png" alt="" />
+
+                    <p class="description">
+                        Strict quality standards for all projects.
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <img src="img/cost&value.png" alt="" />
+
+                    <p class="description">
+                        Cost-effective solutions with high value.
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <img src="img/open communication.png" alt="" />
+
+                    <p class="description">
+                        Open communication for customer satisfaction.
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-content">
+                    <img src="img/ongoing support.png" alt="" />
+
+                    <p class="description">
+                        Ongoing support to meet your changing needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HOW WE WORK SECTION -->
+
+<div class="section work">
+    <div class="heading">
+        <h1 class="primary">how we work</h1>
+        <h4>
+            at kassel we foster collaboration biending expertise and creativity to
+            deliver innovative solutions tallored to your unique needs
+        </h4>
+    </div>
+    <div class="work-container">
+        <div class="box">
+            <img src="img/Competitor Research.png" alt="" />
+            <h2 class="">
+                <span class="primary"> Competitor </span>
+                <span class="primary">Research</span>
+            </h2>
+
+            <p class="description">
+                Kassel excels in competitor research, strategically analyzing market
+                dynamics to fortify your business position. Gain insights, stay
+                ahead, and thrive with Kassel's expertise.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="img/Making Strategy.png" alt="" />
+            <h2 class="">
+                <span class="primary"> Making </span>
+                <span class="primary"> Functional </span>
+                <span class="primary">Strategy</span>
+            </h2>
+
+            <p class="description">
+                Kassel crafts functional strategies, aligning business goals with
+                innovative solutions. Elevate your operations and competitiveness
+                through tailored strategies designed for success.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="img/Project Outline.png" alt="" />
+            <h2 class="">
+                <span class="primary"> Project </span>
+                <span class="primary">Outline</span>
+            </h2>
+
+            <p class="description">
+                In Kassel, project outlines are meticulously crafted, mapping a
+                clear roadmap for success. Precision and clarity define our
+                approach, ensuring your project's seamless execution.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="img/planing.png" alt="" />
+            <h2 class="">
+                <span class="primary"> Discover and </span>
+                <span class="primary">Planning </span>
+            </h2>
+
+            <p class="description">
+                At Kassel, discovery and planning are pivotal. We meticulously
+                uncover client needs, then meticulously plan with precision,
+                ensuring success at every stage.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="img/Solution design.png" alt="" />
+            <h2 class="">
+                <span class="primary"> Solution </span>
+                <span class="primary">design</span>
+            </h2>
+
+            <p class="description">
+                At Kassel, our process extends to solution design, where we craft
+                innovative strategies tailored to our clients' unique challenges,
+                ensuring optimal outcomes.
+            </p>
+        </div>
+
+        <div class="box">
+            <img src="img/final discovry.png" alt="" />
+            <h2 class="">
+                <span class="primary"> Final </span>
+                <span class="primary">Delivery</span>
+            </h2>
+
+            <p class="description">
+                Kassel ensures a flawless final delivery, exceeding expectations
+                with precision and innovation. Trust us to bring your vision to
+                life, seamlessly and satisfactorily
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="section experience">
+    <div class="heading">
+        <h1>
+            <span class="primary"> Experience </span>
+            <span class="primary"> World-class </span>
+            <span class="primary"> Agile </span>
+            <span class="primary"> Product </span>
+            <span class="primary"> Development </span>
+        </h1>
+    </div>
+    <div class="experience-section">
+        <!-- <div class="box">
+                <div class="img-section">
+                    <img src="img/client.png" alt="">
+                </div>
+                <div class="hedding-section">
+                    <h2 class="">
+                        <span class="primary">
+                            100% satisfaction guaranteed
+                        </span>
+                        <span class="primary">satisfaction</span>
+                        <span class="primary">guaranteed</span>
+                    </h2>
+                </div>
+                <p class="description">
+                    Your satisfaction is our very first priority. If you have any concern about your game, we are here to solve them in every possible manner with flexibility.                </p>
+            </div> -->
+
+        <!-- 3D Card  -->
+
+        <div class="cards-wrapper">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-contents card-front">
+                        <div class="card-depth">
+                            <div class="img-section">
+                                <img src="img/client.png" alt="" />
+                            </div>
+                            <h2>
+                                <span class="primary"> 100% </span>
+                                <span class="primary">satisfaction</span>
+                                <span class="primary">guaranteed</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="card-contents card-back">
+                        <div class="card-depth">
+                            <p>
+                                Kassel stands as a leading force in web development,
+                                offering comprehensive solutions tailored to client needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-wrapper">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-contents card-front">
+                        <div class="card-depth">
+                            <div class="img-section">
+                                <img src="img/Communication.png" alt="" />
+                            </div>
+                            <h2>
+                                <span class="primary"> Communication </span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="card-contents card-back">
+                        <div class="card-depth">
+                            <p>
+                                Whether you prefer reaching out through email or giving us a
+                                call, we're always here for you. Your success is our
+                                priority, and communication is key.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-wrapper">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-contents card-front">
+                        <div class="card-depth">
+                            <div class="img-section">
+                                <img src="img/start-project.png" alt="" />
+                            </div>
+                            <h2>
+                                <span class="primary"> Start </span>
+                                <span class="primary">your</span>
+                                <span class="primary">project</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="card-contents card-back">
+                        <div class="card-depth">
+                            <p>
+                                Build a solution that fulfills your dream. With an
+                                experienced and talented team, you can build precisely what
+                                you need.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-wrapper">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-contents card-front">
+                        <div class="card-depth">
+                            <div class="img-section">
+                                <img src="img/idea.png" alt="" />
+                            </div>
+                            <h2>
+                                <span class="primary"> Brainstorming </span>
+                                <span class="primary">and </span>
+                                <span class="primary">Ideation</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="card-contents card-back">
+                        <div class="card-depth">
+                            <p>
+                                We build and strategize solutions based on your vision so
+                                that you have all the options before moving forward with
+                                your project.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------------- FOOTER -------->
+
+<div class="section footer">
+    <div class="container-footer">
+        <div class="contact-section">
+            <div class="contact-item name">
+                <a href="{{url('/')}}">KASSEL</a>
+            </div>
+            <div class="contact-item">
+                <p>
+                    rapid and maintainabie product development bring your startup idea
+                    to life, or solve a business problem
+                </p>
+            </div>
+
+            <!-- <div class="contact-item">
+                      <input type="email" placeholder="E-mail">
+                      <button type="submit"></button>
+                  </div> -->
+
+            <div class="contact-item">
+                <form action="#" id="footer-form">
+                    <div class="input-field field">
+                        <input
+                            type="email"
+                            placeholder="E-mail"
+                            id="footer-email"
+                            class="f-item"
+                            autocomplete="off"
+                        />
+                        <div class="error-txt">E-mail Address can't be blank</div>
+                    </div>
+                    <button type="submit">Send Email</button>
+                </form>
+            </div>
+
+            <div class="contact-item">
+                <h4>follow us</h4>
+
+                <a
+                    href="https://www.facebook.com/profile.php?id=61555183182719&mib
+                        extid=PlNXYD
+                        "
+                    target="_blank"
+                >
+                    <div class="iconDiv">
+                        <i class="fa-brands fa-facebook-f icon"></i>
+                    </div>
+                </a>
+
+                <a
+                    href="https://www.instagram.com/_kassel_?igsh=cTY1dmtxd29nODF3&u
+                        tm_source=qr
+                        "
+                    target="_blank"
+                >
+                    <div class="iconDiv">
+                        <i class="fa-brands fa-instagram icon"></i>
+                    </div>
+                </a>
+
+                <a href="https://pin.it/6CI41cw0A" target="_blank">
+                    <div class="iconDiv">
+                        <i class="fa-brands fa-pinterest-p icon"></i>
+                    </div>
+                </a>
+
+                <a
+                    href="https://x.com/kasselsoft/status/1751659476862537793?s=20"
+                    target="_blank"
+                >
+                    <div class="iconDiv">
+                        <i class="fa-brands fa-x-twitter icon"></i>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/message/74Q6F22FDGNYN1" target="_blank">
+                    <div class="iconDiv">
+                        <i class="fa-brands fa-whatsapp icon"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-heading">
+                <h3 class="">Company</h3>
+            </div>
+            <div class="nav-link">
+                <a href="about-us.html"> about us </a>
+            </div>
+
+            <div class="nav-link">
+                <a href="{{url('/services')}}"> Services </a>
+            </div>
+            <div class="nav-link">
+                <a href="{{url('/jobs')}}"> Career </a>
+            </div>
+        </div>
+
+        <div class="support-section">
+            <div class="support-heading">
+                <h3 class="">support</h3>
+            </div>
+
+            <div class="support-link">
+                <a href="conditions.html" target="_blank"> terms & conditions </a>
+            </div>
+
+            <div class="support-link">
+                <a href="privacy.html" target="_blank"> privacy policy </a>
+            </div>
+
+            <div class="support-link">
+                <a href="{{url('/contact')}}"> contact us </a>
+            </div>
+        </div>
+
+        <div class="location-section">
+            <div class="location-heading">
+                <h3 class="">get in touch</h3>
+            </div>
+
+            <div class="location-item">
+                <i class="fa-solid fa-globe"></i>
+                <p>http://www.kasselsoft.com</p>
+            </div>
+
+            <div class="location-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p>info@kasselsoft.com</p>
+            </div>
+
+            <div class="location-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Queen Rania Street</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Float Button  -->
+<div class="floating-container">
+    <div class="floating-button" id="floating-button">
+        <i class="fa-solid fa-headset"></i>
+    </div>
+
+    <div class="element-container" id="element-container">
+        <span>
+          <a
+              href="https://www.facebook.com/profile.php?id=61555183182719&mibextid=PlNXYD"
+              target="_blank"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </span>
+        <span class="instagram">
+          <a
+              href="https://www.instagram.com/_kassel_?igsh=cTY1dmtxd29nODF3&utm_source=qr"
+              target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </span>
+        <span>
+          <a href="https://pin.it/6CI41cw0A" target="_blank">
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+        </span>
+        <span>
+          <a
+              href="https://x.com/kasselsoft/status/1751659476862537793?s=20"
+              target="_blank"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </span>
+        <span>
+          <a
+              href="https://wa.me/message/74Q6F22FDGNYN1
+                "
+              target="_blank"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </span>
+    </div>
+</div>
+
+<!-- Back to Top Button  -->
+
+<div class="back-top-button">
+    <a href="#top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+</div>
+<div class="cursor"></div>
+<div class="cursor2"></div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="{{asset('frontStyle/JS/script.js')}}"></script>
+<script src="{{asset('frontStyle/JS/float-button.js')}} "></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.container-service{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* padding: 2rem ; */
+    height: 100vh;
+    align-items: center;
+}
+
+.section:nth-child(1) .container-service{
+    height: 80vh;
+}
+.container-service .content-service{
+    width: 40%;
+    padding: 1rem 4rem;
+    height: fit-content;
+}
+
+.container-service .content-service h2{
+    font-size: 2.8rem ;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.container-service .content-service .description{
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.container-service .content-service .description p{
+    font-size: 1.4em;
+    word-spacing: .15rem;
+    line-height: 1.6rem;
+
+}
+
+
+.container-service .animation-service{
+    width: 50%;
+    position: relative;
+    padding: 1rem ;
+    justify-content: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container-service .animation-service .animation-img{
+    height: fit-content;
+    margin: auto;
+    justify-content: center;
+    position: absolute;
+    width: 40%;
+    top: 17%;
+}
+.container-service .animation-service img{
+    filter: var(--filter-blue);
+    width: 100%;
+    margin: auto;
+    transition: all 2s ease-in-out;
+    animation: service-float 2s ease-in-out infinite normal ;
+}
+
+@keyframes service-float{
+    0%{
+      transform: translate(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+        
+.container-service .animation-service .jet{
+    
+    position: absolute;
+    top: 98%;
+    left: 35%;
+}
+
+.section:nth-child(1) .container-service .animation-service .jet,
+.section:nth-child(2) .container-service .animation-service .jet{
+    left: 32.5%;
+}
+
+.container-service .animation-service .jet::before,
+.container-service .animation-service .jet::after,
+.container-service .animation-service .jet span{
+    animation: moveSmoke 2.2s infinite;
+    height: 200px;
+    top: 0px;
+    width: 40px;
+    left: 0%;
+
+}
+
+            /* RESPOSIVE */
+
+@media screen and (max-width: 1000px ){
+    .section .container-service .content-service{
+        width: 50%;
+        
+    }
+    .section .container-service .content-service h2{
+        font-size: 2rem;
+
+    }
+    .section .container-service .content-service p{
+        font-size: 1.2rem;
+
+    }
+    .container-service .animation-service .animation-img {
+        width: 45%;
+        top: 34%;
+    }
+
+    .container-service .animation-service .jet{
+        left: 30%;
+    }
+    .section:nth-child(1) .container-service .animation-service .jet,
+.section:nth-child(2) .container-service .animation-service .jet{
+    left: 25%;
+}
+
+}
+
+@media screen and (max-width: 850px ){
+    .container-service .content-service{
+        padding: 1rem 3rem 1rem 2rem;
+    }
+    .section .container-service .content-service h2{
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+
+    }
+    .section .container-service .content-service p{
+        font-size: 1rem;
+
+    }
+    .container-service .animation-service .animation-img {
+        width: 45%;
+        top: 34%;
+    }
+    .container-service .animation-service .jet{
+        top: 90%;
+        left: 25%;
+    }
+    .section:nth-child(1) .container-service .animation-service .jet,
+    .section:nth-child(2) .container-service .animation-service .jet{
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 750px ){
+    .section{
+        height: fit-content;
+    }
+    
+    .container-service .animation-service{
+        width: 40%;
+        
+    }
+    .container-service .animation-service .animation-img{
+        top: 40%;
+    }
+    .container-service .animation-service .jet{
+        left: 25%;
+    }
+}
+
+@media screen and (max-width: 600px ){
+    .container-service{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .reverse{
+        flex-direction: column-reverse;
+    }
+    .section .container-service .content-service{
+        width: 80% ;
+        margin-top: 2rem;
+    }
+    .section .container-service .container-service h2{
+        margin-bottom: .5rem;
+    }
+    .section .container-service .container-service h2{
+        margin-bottom: .5rem;
+    }
+    
+    .container-service .container-service .animation-img{
+        top: 50%;
+    }
+    /* .container-service .animation-service {
+        border: 1px solid blue;
+
+    } */
+    .section:nth-child(1) .container-service{
+        margin-top: 6rem;
+    }
+    .section:nth-child(1) .container-service .animation-service .animation-img{
+        top:5%;
+    }
+    .section:nth-child(1) .container-service .animation-service .jet{
+        top: 100%;
+        
+    }
+    .container-service .animation-service .jet{
+        top: 125%;
+        
+    }
+    /* .section:nth-child(1) .container-service .animation-service .jet{
+        top: 100%;
+    } */
+
+
+    .container-service .animation-service .jet::before,
+.container-service .animation-service .jet::after,
+.container-service .animation-service .jet span{
+    height: 150px;
+    width: 30px;
+
+    }
+
+    .section{
+        height: max-content;
+    }
+    .container-service{
+        height: max-content;
+    }
+    .container-service .content-service{
+        height: max-content;
+    }
+    .container-service .animation-service{
+        height: 10rem;
+    }
+    .container-service .animation-service .animation-img{
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media  screen and (max-width: 450px){
+    .container-service .animation-service .jet::before,
+.container-service .animation-service .jet::after,
+.container-service .animation-service .jet span{
+    height: 120px;
+    width: 18px;
+    }
+
+    .section .container-service .animation-service .jet{
+        transform: translate(-10px) rotate(-90deg);
+    }
+    .section:nth-child(1) .container-service .animation-service .jet{
+        transform: translate(-10px) rotate(-90deg);
+        top: 120%;
+    }
+    
+    .section .container-service .animation-service .animation-img{
+        top:50%;
+    }
+    .container-service .animation-service .animation-img{
+        width: 65%;
+    }
+}

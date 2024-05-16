@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | KASSEL SOFT</title>
+    <!-- font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- title tag logo -->
+    <!-- <link rel="shortcut icon" href="img/logo.png" type="image/x-icon"> -->
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/contact.css" />
+  </head>
+  <body>
+    <div class="section" id="top">
+      <div class="navbar">
+        <div class="animation-box">
+          <div class="nav-logo">
+            <a href="index.html">KASSEL</a>
+          </div>
+          <!-- <span class="jet"></span> -->
+        </div>
+
+        <nav class="menu" id="nav">
+          <span class="nav-item">
+            <a href="index.html" data-i18n="home">Home</a>
+          </span>
+
+          <span class="nav-item">
+            <a href="about-us.html" data-i18n="about">about us</a>
+          </span>
+          <span class="nav-item">
+            <a href="services.html" data-i18n="services">services</a>
+          </span>
+          <span class="nav-item">
+            <a href="career.html" data-i18n="career">career</a>
+          </span>
+          <span class="nav-item">
+            <a href="contact.html" data-i18n="contact">contact us</a>
+          </span>
+        </nav>
+
+        <div class="language-button">
+          <select name="" id="select" onchange="redirectToPage()">
+            <option value="contact.html" selected>eng</option>
+            <option value="contactAR.html">arb</option>
+          </select>
+        </div>
+
+        <div class="language-btn dropdown" onclick="toggleDropdown()">
+          <button class="dropbtn" id="languageBtn">
+            <i class="fa-solid fa-globe"></i>
+            <span id="languageText">EN</span>
+            <i class="fa-solid fa-caret-down arrow-down"></i>
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="contact.html" onclick="changeLanguage('ENG')">EN</a>
+            <a href="contactAR.html" onclick="changeLanguage('ARB')">AR</a>
+          </div>
+        </div>
+        <input type="checkbox" id="check" />
+        <label for="#check" class="nav-icon">
+          <i class="fa-solid fa-bars" id="menu-icon" onclick="hideSlider()"></i>
+          <i class="fa-solid fa-x" id="close-icon" onclick="showSlider()"></i>
+        </label>
+      </div>
+      <div class="nav-toggle">
+        <a href="index.html"> home </a>
+        <a href="about-us.html"> about us </a>
+        <a href="services.html"> services </a>
+        <a href="career.html"> career </a>
+        <a href="contact.html"> contact us </a>
+      </div>
+
+      <h2 class="primary heading">Contact Us</h2>
+
+      <div class="container-contact">
+        <div class="contact">
+          <form action="#" id="contact-form">
+            <div class="input-box">
+              <div class="input-field field">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  id="name"
+                  class="item"
+                  autocomplete="off"
+                />
+                <div class="error-txt">Full Name can't be blank</div>
+              </div>
+
+              <div class="input-field field">
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  id="email"
+                  class="item"
+                  autocomplete="off"
+                />
+                <div class="error-txt">E-mail Address can't be blank</div>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <div class="input-field field">
+                <input
+                  type="number"
+                  placeholder="Phone Number"
+                  id="phone"
+                  class="item"
+                  autocomplete="off"
+                />
+                <div class="error-txt">Phone Number can't be blank</div>
+              </div>
+
+              <div class="input-field field">
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  id="subject"
+                  class="item"
+                  autocomplete="off"
+                />
+                <div class="error-txt">Subject can't be blank</div>
+              </div>
+            </div>
+
+            <div class="textarea-field field">
+              <textarea
+                name=""
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Your  Message"
+                class="item"
+                autocomplete="off"
+              ></textarea>
+              <div class="error-txt">Message can't be blank</div>
+            </div>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <div class="info">
+            <div class="info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <h4>Address</h4>
+              <p>Queen Rania Street</p>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <h4>Email</h4>
+              <p>info@kasselsoft.com</p>
+            </div>
+
+            <div class="info-item">
+              <i class="fa-solid fa-phone"></i>
+              <h4>Phone</h4>
+              <p>+962 790039555</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="box">
+        <div class="map">
+          <!-- <img src="img/Event.png" alt=""> -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3383.693129186798!2d35.8850833!3d31.996333299999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDU5JzQ2LjgiTiAzNcKwNTMnMDYuMyJF!5e0!3m2!1sar!2seg!4v1711834053429!5m2!1sar!2seg"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3383.7432174110627!2d35.88453542563072!3d31.99497577400023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d31.994248799999998!2d35.8884788!4m5!1s0x151ca13d1331d42f%3A0xe04c250b2e016ae0!2skasselsoft%2C%20Queen%20Rania%20St%2C%20Amman%2011831!3m2!1d31.996213299999997!2d35.8850835!5e0!3m2!1sen!2seg!4v1711828704041!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>     -->
+        </div>
+
+        <a href="https://maps.app.goo.gl/qrAcKSQf1f1QqxY89" target="_blank">
+          <span></span>
+        </a>
+      </div>
+    </div>
+
+    <!--------------- FOOTER -------->
+
+    <div class="section footer">
+      <div class="container-footer">
+        <div class="contact-section">
+          <div class="contact-item name">
+            <a href="index.html">KASSEL</a>
+          </div>
+          <div class="contact-item">
+            <p>
+              rapid and maintainabie product development bring your startup idea
+              to life, or solve a business problem
+            </p>
+          </div>
+
+          <!-- <div class="contact-item">
+                    <input type="email" placeholder="E-mail">
+                    <button type="submit"></button>
+                </div> -->
+
+          <div class="contact-item">
+            <form action="#" id="footer-form">
+              <div class="input-field field">
+                <input
+                  type="email"
+                  placeholder="E-mail"
+                  id="footer-email"
+                  class="f-item"
+                  autocomplete="off"
+                />
+                <div class="error-txt">E-mail Address can't be blank</div>
+              </div>
+              <button type="submit">Send Email</button>
+            </form>
+          </div>
+
+          <div class="contact-item">
+            <h4>follow us</h4>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61555183182719&mib
+                        extid=PlNXYD
+                        "
+              target="_blank"
+            >
+              <div class="iconDiv">
+                <i class="fa-brands fa-facebook-f icon"></i>
+              </div>
+            </a>
+
+            <a
+              href="https://www.instagram.com/_kassel_?igsh=cTY1dmtxd29nODF3&u
+                        tm_source=qr
+                        "
+              target="_blank"
+            >
+              <div class="iconDiv">
+                <i class="fa-brands fa-instagram icon"></i>
+              </div>
+            </a>
+
+            <a href="https://pin.it/6CI41cw0A" target="_blank">
+              <div class="iconDiv">
+                <i class="fa-brands fa-pinterest-p icon"></i>
+              </div>
+            </a>
+
+            <a
+              href="https://x.com/kasselsoft/status/1751659476862537793?s=20"
+              target="_blank"
+            >
+              <div class="iconDiv">
+                <i class="fa-brands fa-x-twitter icon"></i>
+              </div>
+            </a>
+
+            <a href="https://wa.me/message/74Q6F22FDGNYN1" target="_blank">
+              <div class="iconDiv">
+                <i class="fa-brands fa-whatsapp icon"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-section">
+          <div class="nav-heading">
+            <h3 class="">Company</h3>
+          </div>
+          <div class="nav-link">
+            <a href="about-us.html"> about us </a>
+          </div>
+
+          <div class="nav-link">
+            <a href="services.html"> Services </a>
+          </div>
+          <div class="nav-link">
+            <a href="career.html"> Career </a>
+          </div>
+        </div>
+
+        <div class="support-section">
+          <div class="support-heading">
+            <h3 class="">support</h3>
+          </div>
+
+          <div class="support-link">
+            <a href="conditions.html" target="_blank"> terms & conditions </a>
+          </div>
+
+          <div class="support-link">
+            <a href="privacy.html" target="_blank"> privacy policy </a>
+          </div>
+
+          <div class="support-link">
+            <a href="contact.html"> contact us </a>
+          </div>
+        </div>
+
+        <div class="location-section">
+          <div class="location-heading">
+            <h3 class="">get in touch</h3>
+          </div>
+
+          <div class="location-item">
+            <i class="fa-solid fa-globe"></i>
+            <p>http://www.kasselsoft.com</p>
+          </div>
+
+          <div class="location-item">
+            <i class="fa-solid fa-envelope"></i>
+            <p>info@kasselsoft.com</p>
+          </div>
+
+          <div class="location-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Queen Rania Street</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Float Button  -->
+    <div class="floating-container">
+      <div class="floating-button" id="floating-button">
+        <i class="fa-solid fa-headset"></i>
+      </div>
+
+      <div class="element-container" id="element-container">
+        <span>
+          <a
+            href="
+                https://www.facebook.com/profile.php?id=61555183182719&mib
+                        extid=PlNXYD"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </span>
+        <span class="instagram">
+          <a
+            href="
+                https://www.instagram.com/_kassel_?igsh=cTY1dmtxd29nODF3&u
+                        tm_source=qr"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://pin.it/6CI41cw0A
+                "
+            target="_blank"
+          >
+            <i class="fa-brands fa-pinterest-p"></i>
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://x.com/kasselsoft/status/1751659476862537793?s=20
+                "
+            target="_blank"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </span>
+        <span>
+          <a
+            href="https://wa.me/message/74Q6F22FDGNYN1
+                "
+            target="_blank"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </span>
+      </div>
+    </div>
+
+    <!-- Back to Top Button  -->
+
+    <div class="back-top-button">
+      <a href="#top">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/float-button.js"></script>
+  </body>
+</html>

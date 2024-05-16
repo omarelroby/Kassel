@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/astrotomic/laravel-translatable" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/mcamara/laravel-localization" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/openspout/openspout" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vendor/rap2hpoutre/fast-excel" vcs="Git" />
+  </component>
+</project>
