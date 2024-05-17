@@ -24,6 +24,7 @@ Route::group(
     Route::get('/jobs', [\App\Http\Controllers\web\HomeController::class,'careers'])->name('jobs');
     Route::get('/services', [\App\Http\Controllers\web\HomeController::class,'services'])->name('services');
     Route::get('/contact', [\App\Http\Controllers\web\HomeController::class,'contact_us'])->name('contact');
+    Route::get('/blog', [\App\Http\Controllers\web\HomeController::class,'blogs'])->name('blog');
 
 });
 

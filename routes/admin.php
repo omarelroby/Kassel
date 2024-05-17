@@ -31,6 +31,7 @@ Route::middleware(['auth:admin' ])->group(function () {
     Route::group(['namespace' => '\App\Http\Controllers\Dashboard'], function() {
 
         Route::resource('careers', 'CareersController');
+        Route::resource('blogs', 'CareersController');
 
     });
 });

@@ -135,7 +135,7 @@
                                        href="{{route('careers.index')}}">
 													<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
-                                            <i class="bi bi-newspaper fs-2"></i>
+                                            <i class="bi bi-briefcase-fill fs-2"></i>
                                                         <!--end::Svg Icon-->
 										</span>
                                         <span class="menu-title">careers</span>
@@ -158,7 +158,7 @@
 									<span class="menu-link ">
 										<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
-                                            <i class="bi bi-link fs-2"></i>
+                                            <i class="bi bi-collection-fill fs-2"></i>
                                             <!--end::Svg Icon-->
 										</span>
 										<span class="menu-title ">BLOGS</span>
@@ -189,17 +189,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="menu-item">
-                            <a class="menu-link  @if($route=='careers.create' ) active @endif " href="{{route('careers.create')}}">
-												<span class="menu-icon">
+                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion @if(explode('.',$route)[0]=='logout') show @endif">
+
+
+                            <div class="menu-item px-5">
+                                <a href="{{ url('dashboard/logout') }}" class="menu-link px-5">	<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
-                                            <i class="bi bi-door-closed-fill fs-2"></i>
-                                                    <!--end::Svg Icon-->
+                                            <i class="bi bi-box-arrow-in-left fs-2"></i>
+                                        <!--end::Svg Icon-->
 										</span>
 
-                                <span class="menu-title">sign out</span>
-                            </a>
-                        </div>
+                                    <span class="menu-title">log out</span>
+                                </a>
+                            </div>
+
+
 
 
                     </div>
