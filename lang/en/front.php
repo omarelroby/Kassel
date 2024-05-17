@@ -26,5 +26,12 @@ return [
                 enable businesses to concentrate on their core objectives with ease.
                 Apply now and become an integral part of our mission to streamline
                 workflows and drive efficiency!',
-
+    'full name'=>'full name',
+    'email'=>'email',
+    'phone'=>'phone',
+    'subject'=>'subject',
+    'message'=>'message',
+    'address'=>'address',
+    'send'=>'send',
+     'queen'=>'Queen Rania Street',
 ];

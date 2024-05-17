@@ -154,6 +154,52 @@
                                 </div>
                             </div>
                         </div>
+                        <div data-kt-menu-trigger="click" class="menu-item menu-accordion @if(explode('.',$route)[0]=='careers') show @endif">
+									<span class="menu-link ">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
+                                            <i class="bi bi-link fs-2"></i>
+                                            <!--end::Svg Icon-->
+										</span>
+										<span class="menu-title ">BLOGS</span>
+										<span class="menu-arrow"></span>
+									</span>
+                            <div class="menu-sub menu-sub-accordion">
+                                <div class="menu-item">
+                                    <a class="menu-link @if($route=='careers.index' ) active @endif"
+                                       href="{{route('careers.index')}}">
+													<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
+                                            <i class="bi bi-newspaper fs-2"></i>
+                                                        <!--end::Svg Icon-->
+										</span>
+                                        <span class="menu-title">Blogs</span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link  @if($route=='careers.create' ) active @endif " href="{{route('careers.create')}}">
+												<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
+                                            <i class="bi bi-plus-circle fs-2"></i>
+                                                    <!--end::Svg Icon-->
+										</span>
+
+                                        <span class="menu-title">add new blog</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <a class="menu-link  @if($route=='careers.create' ) active @endif " href="{{route('careers.create')}}">
+												<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
+                                            <i class="bi bi-door-closed-fill fs-2"></i>
+                                                    <!--end::Svg Icon-->
+										</span>
+
+                                <span class="menu-title">sign out</span>
+                            </a>
+                        </div>
 
 
                     </div>

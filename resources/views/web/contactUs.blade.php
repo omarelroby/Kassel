@@ -1,15 +1,16 @@
 @extends('web.layouts.master')
 @section('content')
     <div class="container-contact">
-        <div class="contact">
+        <div class="contact" @if(app()->getLocale()=='ar') style="direction: rtl" @else style="direction: ltr" @endif>
             <form action="#" id="contact-form">
                 <div class="input-box">
                     <div class="input-field field">
                         <input
                             type="text"
-                            placeholder="الاسم بالكامل"
+                            placeholder="@lang('front.full name')"
                             id="name"
                             class="item"
+                            required
                             autocomplete="off"
                         />
                         <div class="error-txt">لا يمكن ترك الاسم فارغا</div>
@@ -18,8 +19,9 @@
                     <div class="input-field field">
                         <input
                             type="email"
-                            placeholder="البريد الالكترونى"
+                            placeholder="@lang('front.email')"
                             id="email"
+                            required
                             class="item"
                             autocomplete="off"
                         />
@@ -31,8 +33,9 @@
                     <div class="input-field field">
                         <input
                             type="number"
-                            placeholder="رقم الهاتف"
+                            placeholder="@lang('front.phone')"
                             id="phone"
+                            required
                             class="item"
                             autocomplete="off"
                         />
@@ -42,7 +45,8 @@
                     <div class="input-field field">
                         <input
                             type="text"
-                            placeholder="الموضوع"
+                            required
+                            placeholder="@lang('front.subject')"
                             id="subject"
                             class="item"
                             autocomplete="off"
@@ -57,14 +61,15 @@
                   id="message"
                   cols="30"
                   rows="10"
-                  placeholder="اترك رسالتك"
+                  required
+                  placeholder="@lang('front.message')"
                   class="item"
                   autocomplete="off"
               ></textarea>
                     <div class="error-txt">لا يمكن ترك الرساله فارغه</div>
                 </div>
 
-                <button type="submit">ارسل الرسالة</button>
+                <button type="submit">@lang('front.send')</button>
             </form>
         </div>
 
@@ -72,19 +77,19 @@
             <div class="info">
                 <div class="info-item">
                     <i class="fa-solid fa-location-dot"></i>
-                    <h4>العنوان</h4>
-                    <p>شارع الملكه رانيا</p>
+                    <h4>@lang('front.address')</h4>
+                    <p>@lang('front.queen')</p>
                 </div>
 
                 <div class="info-item">
                     <i class="fa-solid fa-envelope"></i>
-                    <h4>البريد الالكترونى</h4>
+                    <h4>@lang('front.email')</h4>
                     <p>info@kasselsoft.com</p>
                 </div>
 
                 <div class="info-item">
                     <i class="fa-solid fa-phone"></i>
-                    <h4>رقم التليفون</h4>
+                    <h4>@lang('front.phone')</h4>
                     <p>+962 790039555</p>
                 </div>
             </div>
